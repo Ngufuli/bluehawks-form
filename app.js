@@ -2,7 +2,6 @@ const express = require('express');
 const expressLayouts = require('express-ejs-layouts');
 const flash = require('connect-flash');
 const session = require('express-session');
-const passport = require('passport');
 const ejs = require('ejs')
 const path = require('path');
 const fetch = require('node-fetch')
@@ -10,8 +9,7 @@ const fetch = require('node-fetch')
 
 const app = express();
 
-//passport config
-// require('./config/passport')(passport);
+
 
 //Google sheet url
 const GoogleSheetUrl = 'https://script.google.com/macros/s/AKfycbwsVYuYFAT1Vly6NeEm3HJMbgyzMeHFMaaZOwLbD7gBMVDqWHAq/exec'
