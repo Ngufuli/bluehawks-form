@@ -1,0 +1,22 @@
+div{
+	border:solid 1px gray;
+	padding: 30px;
+}
+
+.panel-left{
+	float:left;
+	width: 20%;
+	height: 500px;
+}
+
+.panel-middle{
+	float:left;
+	width: 20%;
+	height: 500px;
+}
+
+.panel-right{
+	float:left;
+	width: 60%;
+	height: 500px;
+}
