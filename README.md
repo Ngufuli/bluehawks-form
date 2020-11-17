@@ -1,8 +1,7 @@
 # bluehawks-form
 
-# clone the repository 
+clone the repository by: git clone https://github.com/Ngufuli/bluehawks-form.git  
 
-# hit npm install
+execute: (npm install) to install dependencies
 
-To start the server
-# npm run start
+To start the server: npm run start
