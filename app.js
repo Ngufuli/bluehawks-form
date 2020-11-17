@@ -17,7 +17,7 @@ const GoogleSheetUrl = 'https://script.google.com/macros/s/AKfycbwsVYuYFAT1Vly6N
 //msg91 begings here
 const SendOtp = require('sendotp');
 
-const sendOtp = new SendOtp('142648A1sxGjfZUM58b0963e',
+const sendOtp = new SendOtp('api key status here',
   "Hi, your OTP is {{otp}}, please don't share it with ANYBODY!");
 
 
