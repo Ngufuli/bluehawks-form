@@ -2,7 +2,7 @@ const express = require('express');
 const expressLayouts = require('express-ejs-layouts');
 const flash = require('connect-flash');
 const session = require('express-session');
-const ejs = require('ejs')
+const ejs = require('ejs');
 const path = require('path');
 const fetch = require('node-fetch')
 
