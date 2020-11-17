@@ -21,7 +21,6 @@ const sendOtp = new SendOtp('142648A1sxGjfZUM58b0963e',
   "Hi, your OTP is {{otp}}, please don't share it with ANYBODY!");
 
 
-const contactNumber = '9115490856';
 
 const senderId = "BLUHKS";
 //end of msg91
