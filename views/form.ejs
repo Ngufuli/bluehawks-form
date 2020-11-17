@@ -1,0 +1,182 @@
+<header>
+
+	<nav class="navbar navbar-expand-lg navbar-dark bg-info">
+  <a class="navbar-brand" href="#">Bluehawks</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav ml-auto">
+     
+      <li>
+      <a class="btn btn-danger" data-target="#mymodal" data-toggle="modal" >Get More Update</a></li>
+     </ul>
+    
+  </div>
+</nav>
+<!-- navbar end -->
+<div id="demo" class="carousel slide" data-ride="carousel">
+  
+  <!-- The slideshow -->
+  <div>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="/images/p5.jpg" alt="study image" width="100%" height="450">
+      <div class="carousel-caption d-none d-md-block">
+        <!--link with button to control pop up form1-->
+    <a class="btn btn-warning" data-target="#mymodal" data-toggle="modal" >Get More Update</a>
+        
+    <h5 style="color:#343a40,text-capitalize">The Great Learner</h5>
+    <p style="color:#343a40,text-capitalize">As Much As You will learn then As Soon As you Earn. </p>
+  </div>
+     </div>
+     <!--modal form pop up!-->
+     <div class="modal"  id="mymodal"> 
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <!-- <h2 class="text-center text-primary">Fill it up to get more update</h2> -->
+            <a href="https://bluehawks.in"><strong class="text-center">Bluehawks.in</strong></a>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>  
+        </div>
+        <div class="modal-body">
+            <!-- Form begins here -->
+                   
+
+                    <div class="row mt-5">
+                        <div class="col-md-6 m-auto">
+                          <div class="card card-body">
+                            
+                    
+                    
+                           <%- include("./partials/messages") %>
+                           <form action="/" method="POST">
+                            <div class="form-group">
+                                <label for="name">Name</label>
+                                <input
+                                type="name"
+                                id="name"
+                                name="name"
+                                class="form-control"
+                                placeholder="Enter Name"
+                                value="<%= typeof name != 'undefined' ? name : '' %>"
+                                />
+                            </div>
+                        
+                            <div id="wrapper">
+                            <div class="form-group">
+                            <div class="control-group">
+                            <label for="select-beast"><i class="fa fa-compass fa-x" aria-hidden="true"></i>State:</label>
+                            <select class="form-control" id="select-state" placeholder="Pick a state..." name="state">
+                            <option value="">Select a state...</option>
+                            <option  value="Andhra Pradesh">Andhra Pradesh</option>
+                            <option  class="dropdown-item" value="Anurachal Pradesh">Anurachal Pradesh</option>
+                            <option  value="Assam">Assam</option>
+                            <option  value="Bihar">Bihar</option>
+                            <option  value="Chhatisgarh">Chhatisgarh</option>
+                            <option  value="Goa">Goa</option>
+                            <option  value="Gujarat"">Gujarat</option>
+                            <option  value="Haryana">Haryana</option>
+                            <option value="Himachal Pradesh">Himachal Pradesh</option>
+                            <option   value="Jharkand">Jharkand</option>
+                            <option value="Karnataka">Karnataka</option>
+                            <option class="dropdown-item"  value="Kerala">Kerala</option>
+                            <option  class="dropdown-item" value="Madhya Pradesh">Madhya Pradesh</option>
+                            <option class="dropdown-item" value="Maharashtra">Maharashtra</option>
+                            <option  class="dropdown-item" value="Manipur">Manipur</option>
+                            <option class="dropdown-item"  value="Mizoram">Mizoram</option>
+                            <option class="dropdown-item" value="Meghalaya">Meghalaya</option>
+                            <option class="dropdown-item" value="Nagaland">Nagaland</option>
+                            <option class="dropdown-item" value="Odisha">Odisha</option>
+                            <option class="dropdown-item"  value="Punjab">Punjab</option>
+                            <option class="dropdown-item" value="Maryland">Maryland</option>
+                            <option class="dropdown-item"  value="Rajasthan">Rajasthan</option>
+                            <option class="dropdown-item" value="Sikkim">Sikkim</option>
+                            <option  class="dropdown-item" value="Tamil Nadu">Tamil Nadu</option>
+                            <option  class="dropdown-item" value="Telangana">Telangana</option>
+                            <option  class="dropdown-item" value="Tripura">Tripura</option>
+                            <option class="dropdown-item" value="Uttrakhand">Uttrakhand</option>
+                            <option class="dropdown-item" value="Uttar Pradesh">Uttar pradesh</option>
+                            <option class="dropdown-item"  value="Uttar Pardesh">Uttar Pardesh</option>
+                            <option class="dropdown-item"  value="West Bengal">West Bengal</option>
+                            </select>
+                    </div>
+                    </div>
+                </div>
+    
+    
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input
+                                type="email"
+                                id="email"
+                                name="email"
+                                class="form-control"
+                                placeholder="Enter Email"
+                                value="<%= typeof email != 'undefined' ? email : '' %>"
+                                />
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Phone</label>
+                                <input
+                                type="text"
+                                id="number"
+                                name="number"
+                                class="form-control"
+                                placeholder="Enter Phone number"
+                                value="<%= typeof phone != 'undefined' ? phone : '' %>"
+                                />
+                                <input type="submit" value="Send otp" id="send" class="btn btn-primary">
+                            </div>
+                        <div class="form-group">
+                            <div class="mb-5">
+                                <label for="verifyotp">Verify OTP</label>
+                                <input 
+                                    type="text" 
+                                    name="otp" 
+                                    class="form-control"
+                                    id="otp"
+                                    value="<%= typeof otp != 'undefined' ? otp : '' %>"
+                                />
+                                <input type="submit" value="Verify otp" id="verify" class="btn btn-primary">
+                            
+                            </div> 
+                        </div>
+                        <div>
+                            <button type="submit" class="btn btn-primary btn-block">
+                                Register
+                              </button>
+                        </div>
+                        </form>
+                    
+                           
+                           
+                          </div>
+                        </div>
+                      </div>
+       </div>
+      </div>
+    </div>
+     </div>
+  </div>
+  </div>
+</div>
+</header>
+
+     <!--end of pop up!-->
+
+
+</header>
+<section class="bg-info">
+  <article class="py-5 text-center text-white ">
+    <div>
+       <h3 class="display-4 ">+91 23456789</h3>
+       <p>If you want best service , Call us Now </p>
+       <button class="btn btn-warning">Contact Now</button>
+    </div>
+  </article>
+</section>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
